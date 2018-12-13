@@ -1,17 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <body>
+  <header>
+    <div class="container">
+      <a routerLink="/" class="logo"> LOGISTIC </a>
+      <nav>
+       
+      </nav>
+    </div>
+    </header>
+  <router-outlet></router-outlet> 
   <app-nav></app-nav>
-  <router-outlet></router-outlet>
-  <div style="text-align:center">
-    <form>
-        <strong>UserName:</strong>
-        <input type="text" formControlName="name">
-        <br><br>
-         <strong>Password:</strong> 
-          <input type="=text"  formControlName="pass">
-            <br><br>
-        <input type="submit" value="login" class="cta" routerLink="/">
-  
-  </form>
-  </div>
-  </body>
+</body>
