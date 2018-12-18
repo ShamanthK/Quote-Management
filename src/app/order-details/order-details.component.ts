@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-order-details',
@@ -10,7 +10,9 @@ export class OrderDetailsComponent implements OnInit {
 
   appTitle = 'LOGISTIC';
 
-  public show: boolean = false;
+  public show1: boolean = false;
+  public show2: boolean = false;
+  public show3: boolean = false;
 
   addForm: FormGroup;
 
@@ -32,12 +34,12 @@ export class OrderDetailsComponent implements OnInit {
 
     this.addForm = new FormGroup( {
 
-      'name': new FormControl(null),
-      'email': new FormControl(null),
-      'phone': new FormControl(null),
-      'type': new FormControl(null),
-      'quantity': new FormControl(null),
-      'destination': new FormControl(null),
+      'name': new FormControl(null, Validators.required),
+      'email': new FormControl(null, [Validators.required, Validators.email]),
+      'phone': new FormControl(null, Validators.required),
+      'type': new FormControl(null, Validators.required),
+      'quantity': new FormControl(null, Validators.required),
+      'destination': new FormControl(null, Validators.required),
       'comments': new FormControl(null),
 
 
@@ -46,7 +48,19 @@ export class OrderDetailsComponent implements OnInit {
 
   showAdd() {
 
-    this.show = !this.show;
+    this.show1 = !this.show1;
+
+  }
+
+  showAll() {
+
+    this.show2 = !this.show2;
+
+  }
+
+  showByName() {
+
+    this.show3 = !this.show3;
 
   }
 

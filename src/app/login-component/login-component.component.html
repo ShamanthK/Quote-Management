@@ -1,11 +1,15 @@
 <body>
+  
   <header>
-    <div class="container">
-      <a routerLink="/" class="logo"> Quote Management Portal </a>
-      <nav>
+      <nav class="navbar navbar-expand-lg navbar-light" style="background: transparent">
+          <a class="navbar-brand" href="#" style="color:white">Quote Management Portal</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
        
       </nav>
-    </div>
+  
     </header>
   
   
@@ -13,13 +17,14 @@
 
   <div style="text-align:center">
     <form><br><br><br><br><br><br>
-        <strong>UserName:</strong>
+        <strong>Username:&nbsp;&nbsp;</strong>
         <input type="text" formControlName="name">
         <br><br>
-         <strong>Password:</strong> 
+         <strong>Password:&nbsp;&nbsp;&nbsp;</strong> 
           <input type="=text"  formControlName="pass">
             <br><br>
-        <input type="submit" value="login" class="cta" [routerLink]="['orderdetails']">
+        <!-- <input type="submit" value="login" class="cta" [routerLink]="['orderdetails']"> -->
+        <button type="button" class="btn btn-info" [routerLink]="['home']">Login</button>
     </form>
   </div>
 

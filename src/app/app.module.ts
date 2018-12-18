@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { ReviewPageComponent } from './review-page/review-page.component';
 import { NavHeaderComponent } from './nav-header/nav-header.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { NavHeaderComponent } from './nav-header/nav-header.component';
     LoginComponentComponent,
     OrderDetailsComponent,
     ReviewPageComponent,
-    NavHeaderComponent
+    NavHeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
